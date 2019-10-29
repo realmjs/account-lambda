@@ -1,0 +1,25 @@
+{
+  "name": "@realmjs/lambda-account-sls",
+  "version": "1.0.0",
+  "description": "Severless Account RESTful API run on Lambda",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realmjs/lambda-account-sls.git"
+  },
+  "author": "duongtdn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realmjs/lambda-account-sls/issues"
+  },
+  "homepage": "https://github.com/realmjs/lambda-account-sls#readme",
+  "dependencies": {
+    "@realmjs/account-restapi": "^1.0.0",
+    "@realmjs/dynamodb-helper": "^1.1.0",
+    "aws-sdk": "^2.559.0",
+    "aws-serverless-express": "^3.3.6"
+  }
+}
