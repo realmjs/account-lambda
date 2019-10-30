@@ -20,6 +20,7 @@
     "@realmjs/account-restapi": "^1.0.0",
     "@realmjs/dynamodb-helper": "^1.1.0",
     "aws-sdk": "^2.559.0",
-    "aws-serverless-express": "^3.3.6"
+    "aws-serverless-express": "^3.3.6",
+    "express": "^4.17.1"
   }
 }
