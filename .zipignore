@@ -1,6 +1,5 @@
 .gitignore
 .git
 test
-lambda-account-sls.zip
 package-lock.json
 README.md
