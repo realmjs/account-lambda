@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/realmjs/lambda-account-sls#readme",
   "dependencies": {
-    "@realmjs/account-restapi": "^1.2.4",
+    "@realmjs/account-restapi": "^1.2.5",
     "@realmjs/dynamodb-helper": "^1.1.0",
     "aws-sdk": "^2.561.0",
     "aws-serverless-express": "^3.3.6",
