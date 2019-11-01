@@ -4,7 +4,7 @@
   "description": "Severless Account RESTful API run on Lambda",
   "main": "src/server.js",
   "scripts": {
-    "test": "APPS='account|http://localhost:3100' node test/server.local",
+    "test": "node test/server.local",
     "zip": "realm zip"
   },
   "repository": {
@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/realmjs/lambda-account-sls#readme",
   "dependencies": {
-    "@realmjs/account-restapi": "^1.2.2",
+    "@realmjs/account-restapi": "^1.2.4",
     "@realmjs/dynamodb-helper": "^1.1.0",
-    "aws-sdk": "^2.559.0",
+    "aws-sdk": "^2.561.0",
     "aws-serverless-express": "^3.3.6",
     "express": "^4.17.1"
   }

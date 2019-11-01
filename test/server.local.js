@@ -1,5 +1,7 @@
 "use strict"
 
+require('./env')()
+
 const app = require('../src/server')
 
 app.listen(3100, function(err) {
