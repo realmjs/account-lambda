@@ -1,1 +1,1 @@
-# lambda-account-sls
+# account-lambda

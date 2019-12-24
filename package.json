@@ -1,5 +1,5 @@
 {
-  "name": "@realmjs/lambda-account-sls",
+  "name": "@realmjs/account-lambda",
   "version": "1.0.0",
   "description": "Severless Account RESTful API run on Lambda",
   "main": "src/server.js",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/realmjs/lambda-account-sls.git"
+    "url": "git+https://github.com/realmjs/account-lambda.git"
   },
   "author": "duongtdn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/realmjs/lambda-account-sls/issues"
+    "url": "https://github.com/realmjs/account-lambda/issues"
   },
-  "homepage": "https://github.com/realmjs/lambda-account-sls#readme",
+  "homepage": "https://github.com/realmjs/account-lambda#readme",
   "dependencies": {
-    "@realmjs/account-restapi": "^1.2.5",
-    "@realmjs/dynamodb-helper": "^1.1.0",
-    "aws-sdk": "^2.561.0",
+    "@realmjs/account-restapi": "^1.3.1",
+    "@realmjs/dynamodb-helper": "^1.5.5",
+    "aws-sdk": "^2.596.0",
     "aws-serverless-express": "^3.3.6",
     "express": "^4.17.1"
   }
