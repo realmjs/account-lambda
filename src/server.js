@@ -12,6 +12,32 @@ api.helpers({ Database: dbh.drivers})
 // assign alert function to helpers
 api.helpers({ alert : msg => console.log(msg) })
 
+api.helpers({
+  onCreatedUser({user, token}) {
+    const https = require('https')
+    const data = JSON.stringify({user, token})
+    const options = {
+      port: process.env.ECOMMERCE_PORT || 443,
+      host: process.env.ECOMMERCE_HOST,
+      method: 'POST',
+      path: '/me',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': data.length
+      }
+    }
+    const req = https.request(options, (res) => {
+      // res.on('data', (d) => {
+      //   process.stdout.write(d)
+      // })
+    })
+    req.on('error', (error) => {
+      console.error(error)
+    })
+    req.end(data)
+  }
+})
+
 // assign sendEmail to helpers
 const templates = {
   verifyemail: {"charset":"UTF-8","subject":"Verify your email registered at {{service}}","body":"\n<html>\n<head></head>\n<body>\n<p>Dear {{customer}},</p>\n<p>Your email is registered to use services provided by <b> {{service}} </b> </p>\n<p>To verify that you are the owner of this email, please go to the following URL</p>\n<a href='{{endpoint}}?email={{email}}&t={{token}}' > {{endpoint}}?email={{email}}&t={{token}} </a>\n<p> This link expires 24 hours after your original request </p>\n<p style=\"color: red\"> Notes: If you did not register this email at our service, please DO NOT click on the link. We are sorry for the inconvenience </p>\n<p> This email is auto-generated. Please <b>do not reply</b> this email.</p>\n<p> Sincerely, </p>\n<p> {{signature}} </p>\n</body>\n</html>"},
